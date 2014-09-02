@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.synced_folder "", "/vagrant", create: true
+  config.vm.synced_folder "~/dev/hello", "/hello", create: true
 
   config.vm.provision "shell", path: "./init.sh"
 

@@ -14,14 +14,17 @@ class { 'jenkins':
 
 jenkins::plugin {
   'ansicolor' : ;
+  'credentials' : ;
   'deploy' : ;
   'git' : ;
   'git-client' : ;
-  'gitlab-hook' : ;
-  'gitlab-merge-request-jenkins' : ;
-  'git-parameter' : ;
+  'multiple-scms' : ;
+  'parameterized-trigger' : ;
+  'promoted-builds' : ;
+  'scm-api' : ;
   'ssh' : ;
-  'twitter' : ;
+  'ssh-credentials' : ;
+  'token-macro' : ;
   'ws-cleanup' : ;
 }
 
