@@ -10,7 +10,7 @@ echo "Installing ruby-dev"
 sudo apt-get install -y ruby-dev
 echo "Installing librarian-puppet"
 sudo gem install librarian-puppet
-cd puppet
+cd /vagrant/puppet
 echo "Installing puppet modules from Puppetfile"
 librarian-puppet install
 date > /vagrant/init.ran
