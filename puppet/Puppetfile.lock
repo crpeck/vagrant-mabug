@@ -43,6 +43,7 @@ GIT
       puppetlabs-stdlib (>= 0.1.6)
 
 DEPENDENCIES
+  darin-zypprepo (>= 0)
   guest_additions (>= 0)
   jenkins (>= 0)
   puppetlabs-apt (>= 0)
