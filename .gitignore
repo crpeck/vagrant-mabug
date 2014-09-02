@@ -1,5 +1,5 @@
 init.ran
-.tmp/
-.vagrant/
-puppet/modules/
-modules/
+.tmp
+.vagrant
+.librarian
+.Puppetfile.lock
