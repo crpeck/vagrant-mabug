@@ -8,6 +8,7 @@ class { '::tomcat7':
   manager_hosts   => '127.0.0.1',
 }
 
+
 class { 'jenkins':
   configure_firewall => false,
 }

@@ -30,4 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "--pluginsync --verbose"
     ]
   end
+
+  config.vm.provision "shell", path: "./restart-tomcat.sh"
+
 end

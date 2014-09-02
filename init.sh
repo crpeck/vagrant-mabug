@@ -6,5 +6,12 @@ if [ -f /vagrant/init.ran ]; then
 fi
 echo "Provisioning....."
 sudo apt-get update
+echo "Installing ruby-dev"
+sudo apt-get install -y ruby-dev
+echo "Installing librarian-puppet"
+sudo gem install librarian-puppet
+cd puppet
+echo "Installing puppet modules from Puppetfile"
+librarian-puppet install
 date > /vagrant/init.ran
 exit 0
