@@ -1,4 +1,5 @@
 init.ran
 .tmp/
 .vagrant/
+puppet/modules/
 modules/
