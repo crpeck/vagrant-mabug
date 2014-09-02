@@ -1,10 +1,5 @@
 class { '::tomcat7':
   port   => '8080',
-  setenv => {
-              db_url      => hiera('db_url'),
-              db_user     => hiera('db_user'),
-              db_password => hiera('db_password'),
-            },
   java_opts       =>  [ '-XX:PermSize=256M', '-XX:MaxPermSize=356M' ],
   tomcat_managers =>  [
                         [ 'jenkins', 'jenkins-password', 'manager-script' ],
