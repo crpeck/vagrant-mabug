@@ -24,3 +24,7 @@ jenkins::plugin {
   'twitter' : ;
   'ws-cleanup' : ;
 }
+
+package { 'maven':
+  ensure  => present,
+}
