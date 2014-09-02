@@ -2,6 +2,9 @@ forge "http://forge.puppetlabs.com"
 mod "puppetlabs/stdlib"
 mod "puppetlabs/apt"
 
+mod "jenkins",
+  :git => 'https://github.com/jenkinsci/puppet-jenkins.git'
+
 mod "sudoers",
   :git => 'https://github.com/pcfens/puppet-sudoers.git'
 

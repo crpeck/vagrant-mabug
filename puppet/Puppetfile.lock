@@ -1,8 +1,11 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    darin-zypprepo (1.0.1)
     puppetlabs-apt (1.6.0)
       puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-java (1.1.1)
+      puppetlabs-stdlib (>= 0.1.6)
     puppetlabs-stdlib (4.3.2)
 
 GIT
@@ -21,6 +24,17 @@ GIT
     guest_additions (0.0.1)
 
 GIT
+  remote: https://github.com/jenkinsci/puppet-jenkins.git
+  ref: master
+  sha: 09b8cbc858eb9507009aa56c9895fd126977c9a7
+  specs:
+    jenkins (1.1.0)
+      darin-zypprepo (>= 1.0.1)
+      puppetlabs-apt (>= 0.0.3)
+      puppetlabs-java (>= 1.0.1)
+      puppetlabs-stdlib (>= 2.0.0)
+
+GIT
   remote: https://github.com/pcfens/puppet-sudoers.git
   ref: master
   sha: d33805b5900d65880cd5dad3df1e02bf8e7000db
@@ -30,6 +44,7 @@ GIT
 
 DEPENDENCIES
   guest_additions (>= 0)
+  jenkins (>= 0)
   puppetlabs-apt (>= 0)
   puppetlabs-stdlib (>= 0)
   sudoers (>= 0)
