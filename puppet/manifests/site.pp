@@ -5,7 +5,7 @@ class { '::tomcat7':
                         [ 'jenkins', 'jenkins-password', 'manager-script' ],
                         [ 'manager', '12345', 'manager-gui' ],
                       ],
-  manager_hosts   => '127.0.0.1',
+  manager_hosts   => '127.0.0.1|10\.0\.2\..*',
 }
 
 
@@ -31,4 +31,8 @@ jenkins::plugin {
 
 package { 'maven':
   ensure  => present,
+}
+
+package { 'curl':
+  ensure => present,
 }
