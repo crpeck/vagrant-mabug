@@ -1,0 +1,12 @@
+forge "http://forge.puppetlabs.com"
+mod "puppetlabs/stdlib"
+mod "puppetlabs/apt"
+
+mod "sudoers",
+  :git => 'https://github.com/pcfens/puppet-sudoers.git'
+
+mod "guest_additions",
+  :git => 'git://github.com/pcfens/puppet-guest_additions'
+
+mod "tomcat7",
+  :git => 'git://github.com/crpeck/tomcat7.git'

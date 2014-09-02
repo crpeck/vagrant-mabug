@@ -1,0 +1,37 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-apt (1.6.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-stdlib (4.3.2)
+
+GIT
+  remote: git://github.com/crpeck/tomcat7.git
+  ref: master
+  sha: 494bde2a2f94a0ba8e7a5b2ca92ad6a3bafca25a
+  specs:
+    tomcat7 (0.1.1)
+      puppetlabs-stdlib (>= 3.0.0)
+
+GIT
+  remote: git://github.com/pcfens/puppet-guest_additions
+  ref: master
+  sha: c96a4a5022a32161c17290a0a5bf3fde20984f09
+  specs:
+    guest_additions (0.0.1)
+
+GIT
+  remote: https://github.com/pcfens/puppet-sudoers.git
+  ref: master
+  sha: d33805b5900d65880cd5dad3df1e02bf8e7000db
+  specs:
+    sudoers (0.0.1)
+      puppetlabs-stdlib (>= 0.1.6)
+
+DEPENDENCIES
+  guest_additions (>= 0)
+  puppetlabs-apt (>= 0)
+  puppetlabs-stdlib (>= 0)
+  sudoers (>= 0)
+  tomcat7 (>= 0)
+
