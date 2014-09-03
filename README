@@ -10,9 +10,18 @@ typing "vagrant up" will:
 
 To try this out:
 After you "vagrant up" point your browser at:
+
 http://localhost:8090 for jenkins
-optionally
-http://localhost:8080/manager , userid=manager, password=12345 for Tomcat Manager
+-click on the "hello-world" project
+-click on Build Now (on the left hand side)
+
+This will build the hello-world project and deploy it to tomcat.
+Hopefully you will see a "Blue Ball" next to the Entry under Build History,
+if it's Red something went wrong.
+
+Then you can see it by going to:
+http://localhost:8080/hello-world
+
 
 To see Jenkins do the auto-build & deploy you need to edit the file index.jsp
 and commit the change to git:
@@ -26,3 +35,5 @@ git commit -m 'updated index.jsp'
 Then watch Jenkins build & autodeploy the new warfile to Tomcat, reload
 http://localhost:8080 to see the change.
 
+Note: Tomcat Manager is installed as well, if you want to play with it:
+http://localhost:8080/manager , userid=manager, password=12345 for Tomcat Manager
