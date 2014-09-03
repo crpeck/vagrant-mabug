@@ -1,0 +1,21 @@
+Simple Vagrant that uses an Ubuntu 14.04 box and
+-installs Tomcat running on port 8080 with Tomcat Manager in place
+-installs Jenkins CI running on port 8090
+--adds a job named 'hello-world'
+--installs https://github.com/crpeck/hello-world.git to /usr/local/src
+  and a post-commit hook to curl to jenkins to do a project run that
+  builds teh hello-world.war file and auto-deploys it to Tomcat
+
+To try this out:
+point your browser at:
+http://localhost:8090 for jenkins
+http://localhost:8080/manager , userid=manager, password=12345 for Tomcat Manager
+
+vagrant ssh
+cd /usr/local/src/hello-world/src/main/webapp/
+vi index.jsp
+git add index.jsp
+git commit -m 'updated index.jsp'
+
+Then watch Jenkins build & autodeploy the new warfile
+
