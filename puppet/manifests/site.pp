@@ -2,7 +2,7 @@ class { '::tomcat7':
   port            => '8080',
   java_opts       =>  [ '-XX:PermSize=256M', '-XX:MaxPermSize=356M' ],
   tomcat_managers =>  [
-                        [ 'jenkins', 'jenkins-password', 'manager-script' ],
+                        [ 'jenkins', '12345', 'manager-script' ],
                         [ 'manager', '12345', 'manager-gui' ],
                       ],
   manager_hosts   => '127.0.0.1|10\.0\.2\..*',
@@ -57,6 +57,15 @@ file { '/usr/local/src/hello-world/.git/hooks/post-commit':
   group   => 'vagrant',
   mode    => '0755',
   ensure  => present,
-  content => "curl -X POST http://localhost:8080/job/hello-world/build",
+  content => "curl -X POST http://localhost:8090/job/hello-world/build\n",
 }
+
+file { '/home/vagrant/.gitconfig':
+  owner   => 'vagrant',
+  group   => 'vagrant',
+  mode    => '0644',
+  ensure  => present,
+  content => "[user]\n email = vagrantuser@some.where\n name = Vagrant User\n",
+}
+
 

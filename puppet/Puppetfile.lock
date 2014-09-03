@@ -7,6 +7,7 @@ FORGE
     puppetlabs-java (1.1.1)
       puppetlabs-stdlib (>= 0.1.6)
     puppetlabs-stdlib (4.3.2)
+    puppetlabs-vcsrepo (1.1.0)
 
 GIT
   remote: git://github.com/crpeck/tomcat7.git
@@ -48,6 +49,7 @@ DEPENDENCIES
   jenkins (>= 0)
   puppetlabs-apt (>= 0)
   puppetlabs-stdlib (>= 0)
+  puppetlabs-vcsrepo (>= 0)
   sudoers (>= 0)
   tomcat7 (>= 0)
 
