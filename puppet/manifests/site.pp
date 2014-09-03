@@ -73,6 +73,6 @@ file { '/var/lib/tomcat7/webapps/ROOT/index.html':
   group   => 'tomcat7',
   mode    => '0644',
   require => Class['::tomcat7'],
-  content => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <head> <title>Jenkins Demo</title> </head> <body> <h1>It works !</h1> Click here to see the <a href="/hello-world">hello-world</a>i example'
+  content => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <head> <title>Jenkins Demo</title> </head> <body> <h1>It works !</h1> Click here to see the <a href="/hello-world">hello-world</a> example'
 }
 
