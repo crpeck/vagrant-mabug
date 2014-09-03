@@ -10,14 +10,11 @@
 #
 echo ""
 #
-# if init.ran exists, give option to run this provisioner anyways
-#
 if [ -f /vagrant/init.ran ]; then
-  read -p "Shell provisioner init.sh has already run, shall I run it again? " yn
-  case $yn in
-    [Yy]* ) echo "ok, running provisioner init.sh"; break;;
-    [Nn]* ) echo "ok, skipping run of provisioner init.sh"; exit 0;;
-  esac
+  echo "init.sh shell provisioner already ran, skipping it this time"
+  echo "if you want it to run, remove the file init.ran and rerun"
+  echo "vagrant provision"
+  exit 0
 fi
 #
 echo "Provisioning..."
