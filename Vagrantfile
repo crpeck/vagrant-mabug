@@ -14,8 +14,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.synced_folder "", "/vagrant", create: true
-# point this to location of source code directory on local system
-  config.vm.synced_folder "../hello-world", "/tmp/hello-world", create: true
 
   config.vm.provision "shell", path: "./init.sh"
 
