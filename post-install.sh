@@ -1,4 +1,7 @@
 #!/bin/bash
+sudo service jenkins restart
+
+exit 0
 #
 # run this after puppet provision is finished
 #sudo service tomcat7 restart

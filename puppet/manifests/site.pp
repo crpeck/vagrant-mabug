@@ -12,11 +12,10 @@ class { '::tomcat7':
 class { 'jenkins':
   configure_firewall => false,
 
-  config_hash => {
+  config_hash   => {
     'HTTP_PORT' => { 'value' => '8090' },
     'AJP_PORT'  => { 'value' => '8099' },
   },
-
 }
 
 jenkins::plugin {
@@ -42,3 +41,22 @@ package { 'maven':
 package { 'curl':
   ensure => present,
 }
+
+vcsrepo { '/usr/local/src/hello-world':
+  owner    => 'vagrant',
+  group    => 'vagrant',
+  ensure   => 'present',
+  provider => git,
+  source   => 'https://github.com/crpeck/hello-world.git',
+  require  => Class['::jenkins'],
+  before   => File['/usr/local/src/hello-world/.git/hooks/post-commit'],
+}
+
+file { '/usr/local/src/hello-world/.git/hooks/post-commit':
+  owner   => 'vagrant',
+  group   => 'vagrant',
+  mode    => '0755',
+  ensure  => present,
+  content => "curl -X POST http://localhost:8080/job/hello-world/build",
+}
+
