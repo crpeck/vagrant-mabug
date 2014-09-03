@@ -57,7 +57,7 @@ file { '/usr/local/src/hello-world/.git/hooks/post-commit':
   group   => 'vagrant',
   mode    => '0755',
   ensure  => present,
-  content => "curl -X POST http://localhost:8090/job/hello-world/build\n",
+  content => "curl -X POST http://localhost:8090/job/hello-world/build?delay=0sec\n",
 }
 
 file { '/home/vagrant/.gitconfig':
