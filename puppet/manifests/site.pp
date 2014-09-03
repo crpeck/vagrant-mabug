@@ -1,5 +1,5 @@
 class { '::tomcat7':
-  port            => '8090',
+  port            => '8080',
   java_opts       =>  [ '-XX:PermSize=256M', '-XX:MaxPermSize=356M' ],
   tomcat_managers =>  [
                         [ 'jenkins', 'jenkins-password', 'manager-script' ],
@@ -11,6 +11,12 @@ class { '::tomcat7':
 
 class { 'jenkins':
   configure_firewall => false,
+
+  config_hash => {
+    'HTTP_PORT' => { 'value' => '8090' },
+    'AJP_PORT'  => { 'value' => '8099' },
+  },
+
 }
 
 jenkins::plugin {
