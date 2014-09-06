@@ -10,9 +10,10 @@
 #
 echo ""
 #
-if [ -f /vagrant/init.ran ]; then
+if [ -f /tmp/init.ran ]; then
   echo "init.sh shell provisioner already ran, skipping it this time"
-  echo "if you want it to run, remove the file init.ran and rerun"
+  echo "if you want it to run:"
+  echo "vagrant ssh -c \"rm /tmp/init.ran\""
   echo "vagrant provision"
   exit 0
 fi
@@ -30,8 +31,8 @@ cd /vagrant/puppet
 echo -e "\nInstalling puppet modules from Puppetfile"
 librarian-puppet install
 #
-echo -e "\nCreating file init.ran, to run init.sh during provisioning again you"
-echo "must remove the file named init.ran"
+echo -e "\nCreating file /tmp/init.ran, to run init.sh during provisioning again you"
+echo "must remove the file named /tmp/init.ran inside the vagrant box"
 date > /vagrant/init.ran
 #
 echo -e "\ninit.sh finished\n"
