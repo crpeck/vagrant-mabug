@@ -39,3 +39,6 @@ http://localhost:8080 to see the change.
 
 Note: Tomcat Manager is installed as well, if you want to play with it:
 http://localhost:8080/manager , userid=manager, password=12345 for Tomcat Manager
+
+I've included a script output file of running 'vagrant up', as well as a shell script to replay the file, with a speed up of +100. It run's in the VagrantBox, since I know scriptreplay is installed on that system.
+

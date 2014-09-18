@@ -4,6 +4,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+# uncomment to stay informed of updates to the box
+  config.vm.box_check_update = false
+
   config.vm.box = "wmit/trusty64"
 
   config.vm.network "forwarded_port", guest: 8080, host: 8080, auto_correct: true
