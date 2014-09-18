@@ -1,5 +1,7 @@
 Simple Vagrant that uses an Ubuntu 14.04 box
 
+Note: More extended information, as well as a copy of the presenation this was created for can be found at http://github.com/crpeck/mabug-2014
+
 typing "vagrant up" will:
 -install Tomcat running on port 8080 with Tomcat Manager in place
 -install Jenkins CI running on port 8090
